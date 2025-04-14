@@ -176,6 +176,8 @@ def main(args):
         df["Task"] = df["Scores"].apply(lambda x: x[0])
         df["MLP_Score"] = df["Scores"].apply(lambda x: x[1][0])
         df["KNN_Score"] = df["Scores"].apply(lambda x: x[2][0])
+        df['MLP_Weight'] = df["Scores"].apply(lambda x: x[1][1])
+        df['KNN_Weight'] = df["Scores"].apply(lambda x: x[2][1])
         df.drop(columns=["Scores"], inplace=True)
         df.sort_values(by="Task", inplace=True)
 
