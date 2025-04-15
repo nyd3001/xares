@@ -4,7 +4,7 @@ import torch
 from transformers import WhisperModel, WhisperProcessor
 
 
-class WhisperEncoder(torch.nn.Module):
+class WhisperGit0414Encoder(torch.nn.Module):
     def __init__(self, model_name="openai/whisper-base"):
         super().__init__()
 
