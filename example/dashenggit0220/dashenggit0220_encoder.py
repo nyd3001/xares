@@ -2,7 +2,7 @@ import torch
 from dasheng import dasheng_base
 
 
-class DashengEncoder(torch.nn.Module):
+class DashengGit0220Encoder(torch.nn.Module):
     def __init__(self):
         super().__init__()
         self.sampling_rate = 16000

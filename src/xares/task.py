@@ -295,7 +295,7 @@ class XaresTask:
         mlp = self.mlp_model(
             in_features=self.encoder.output_dim, out_features=self.config.output_dim, criterion=self.config.criterion
         )
-
+        print("gradient_accumulation_steps:", self.config.gradient_accumulation_steps)
         self.trainer = Trainer(
             mlp,
             ckpt_dir=self.ckpt_dir,
