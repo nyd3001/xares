@@ -150,8 +150,10 @@ class XaresTask:
         if self.config.task_type == "contrastive":
             self.mlp_model = RetrivalMLP
         elif self.config.task_type == "asr":
+            print("using asrModelForGeneration")
             self.mlp_model = AsrModelForGeneration
         else:
+            print("using simple")
             self.mlp_model = Mlp
 
         self.encoded_tar_path_of_split = {

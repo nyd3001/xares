@@ -24,7 +24,7 @@ class DashengOur0414Encoder(torch.nn.Module):
     def forward(self, audio: torch.Tensor):
         assert isinstance(audio, torch.Tensor)  
         if audio.ndim == 1:
-            audio = audio.unsqueeze(0)
+            audio = audio.unsqueeze(0)self.model.eval()
         device = audio.device
         self.model.eval()
         if audio.shape[-1] > self.max_length:
