@@ -217,3 +217,5 @@ class MyCustomEncoder(torch.nn.Module):
 
 Adding a new task is easy. Refer to the existing task implementations for guidance.
 You need to create a `TaskConfig` tailored to your chosen dataset.
+
+
